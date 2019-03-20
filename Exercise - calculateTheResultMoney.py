@@ -1,20 +1,20 @@
 def setupinitialMoney():
-    money = int(input("Insert the initial balance above 0: "))
+    money = float(input("Insert the initial balance above 0: "))
     while money<0:
         print ("Please, insert balance above 0")
-        money = int(input("Insert the initial balance above 0: "))
+        money = float(input("Insert the initial balance above 0: "))
     else:
         return(money)
     
 def setupPercent():
-    percentage = int(input("Insert the percentage without % sign: "))
+    percentage = float(input("Insert the percentage without % sign: "))
     return(percentage)
 
 def setupYears():
-    years = int(input("Insert value of years between 0 and 20: "))
+    years = float(input("Insert value of years between 0 and 20: "))
     while years < 0 or years >20:
-        print("Please, insert positive number")
-        years = int(input("Insert value of years between 0 and 20: "))
+        print("Please, insert number between 0 and 20")
+        years = float(input("Insert value of years between 0 and 20: "))
     else:
         return(years)
     
@@ -33,6 +33,6 @@ def main():
     while (years>0):
         result = calculateTheResultMoney(initialMoney, percent)
         years=years-1 
-    print ("After", y, "years, your", y, "balance turn to", result)
+    print ("After", y, "years, your", y, "balance will turn to", result)
     print ("Thank you for using the app!")
 main()
