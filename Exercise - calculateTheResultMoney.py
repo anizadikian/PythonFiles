@@ -20,7 +20,7 @@ def setupYears():
     
 def calculateTheResultMoney(initialMoney, percentage):
     i = (percentage/100)+1
-    value = value *i
+    value = initialMoney *i
     return(value)
 
 def main():
@@ -28,11 +28,11 @@ def main():
     initialMoney = setupinitialMoney()
     percent = setupPercent()
     years = setupYears()
-    money = x
-    years = y
+    x = initialMoney
+    y = years
     while (years>0):
-        result = calculateTheResultMoney(initialMoney, percentage)
+        result = calculateTheResultMoney(initialMoney, percent)
         years=years-1 
-    print ("After", y, "years, your", i, "balance turn to", result)
+    print ("After", y, "years, your", y, "balance turn to", result)
     print ("Thank you for using the app!")
 main()
